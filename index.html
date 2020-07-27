@@ -1,0 +1,321 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@suin/japannetbank-email-parser - v1.0.0</title>
+	<meta name="description" content="Documentation for @suin/japannetbank-email-parser - v1.0.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@suin/japannetbank-email-parser - v1.0.0</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>@suin/japannetbank-email-parser - v1.0.0</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#suinjapannetbank-email-parser" id="suinjapannetbank-email-parser" style="color: inherit; text-decoration: none;">
+					<h1>@suin/japannetbank-email-parser</h1>
+				</a>
+				<p>ジャパンネット銀行からの通知メールをパースしてオブジェクトにして返す関数。</p>
+				<a href="#通知対応状況" id="通知対応状況" style="color: inherit; text-decoration: none;">
+					<h2>通知対応状況</h2>
+				</a>
+				<p>以下の通知をパースすることができます。</p>
+				<p><strong>自動振込サービス</strong></p>
+				<ul>
+					<li>✅ 自動振込サービスのご確認 - <a href="./automaticTransferRegistrationCreated.ts">automaticTransferRegistrationCreated</a></li>
+					<li>✅ 自動振込サービス登録削除のご連絡 - <a href="./automaticTransferRegistrationDeleted.ts">automaticTransferRegistrationDeleted</a></li>
+					<li>✅ 自動振込サービス登録内容変更のご連絡 - <a href="./automaticTransferRegistrationUpdated.ts">automaticTransferRegistrationUpdated</a></li>
+				</ul>
+				<p><strong>WEB 総振</strong></p>
+				<ul>
+					<li>✅ ＷＥＢ総振の振込実施のお知らせ - <a href="./bulkTransferCompleted.ts">bulkTransferCompleted</a></li>
+					<li>✅ ＷＥＢ総振手数料引落のお知らせ - <a href="./bulkTransferUpcoming.ts">bulkTransferUpcoming</a></li>
+					<li>✅ ＷＥＢ総振実施の事前連絡 - <a href="./bulkTransferUpcoming.ts">bulkTransferUpcoming</a></li>
+				</ul>
+				<p><strong>ペイジー</strong></p>
+				<ul>
+					<li>✅ ペイジー払い込みのご確認 - <a href="./payeasyPaid.ts">payeasyPaid</a></li>
+				</ul>
+				<p><strong>定期預金</strong></p>
+				<ul>
+					<li>✅ 定期預金自動継続のご案内 - <a href="./timeDepositAutomaticallyRenewed.ts">timeDepositAutomaticallyRenewed</a></li>
+					<li>✅ 定期預金新約のご案内 - <a href="./timeDepositCreated.ts">timeDepositCreated</a></li>
+					<li>✅ 定期預金の満期を迎えたお客さまへ - <a href="./timeDepositMatured.ts">timeDepositMatured</a></li>
+					<li>✅ 定期預金の満期を迎えるお客さまへ - <a href="./timeDepositWillMature.ts">timeDepositWillMature</a></li>
+				</ul>
+				<p><strong>振込</strong></p>
+				<ul>
+					<li>✅ 振込入金のご連絡 - <a href="./transferDeposited.ts">transferDeposited</a></li>
+					<li>✅ 振込先口座の登録のご確認 - <a href="./transferDestinationRegistered.ts">transferDestinationRegistered</a></li>
+					<li>✅ 振込限度額変更のご確認 - <a href="./transferWithdrawalLimitChanged.ts">transferWithdrawalLimitChanged</a></li>
+					<li>✅ 振込予約のご確認 - <a href="./transferWithdrawalScheduled.ts">transferWithdrawalScheduled</a></li>
+					<li>✅ 振り込みのご確認 - <a href="./transferWithdrawn.ts">transferWithdrawn</a></li>
+				</ul>
+				<p><strong>VISA デビット</strong></p>
+				<ul>
+					<li>✅ 【重要】Ｖｉｓａデビット利用停止のご連絡 - <a href="./visaFrozen.ts">visaFrozen</a></li>
+					<li>✅ 【ＪＮＢ／Ｖｉｓａデビット】利用限度額変更のお知らせ - <a href="./visaLimitChanged.ts">visaLimitChanged</a></li>
+					<li>✅ 【Ｖｉｓａデビット】ご利用代金ご返金のお知らせ - <a href="./visaRefunded.ts">visaRefunded</a></li>
+					<li>✅ 【Ｖｉｓａデビット】ご利用代金お引き落としのお知らせ - <a href="./visaWithdrawn.ts">visaWithdrawn</a></li>
+				</ul>
+				<a href="#インストール方法" id="インストール方法" style="color: inherit; text-decoration: none;">
+					<h2>インストール方法</h2>
+				</a>
+				<pre><code class="language-bash">yarn add @suin/japannetbank-email-parser
+<span class="hljs-comment"># or</span>
+npm install @suin/japannetbank-email-parser</code></pre>
+				<a href="#用法" id="用法" style="color: inherit; text-decoration: none;">
+					<h2>用法</h2>
+				</a>
+				<p>基本的な用法としては、<code>parseJapannetbankNotification</code>関数にメールの題名と本文を渡します。この関数は題名と本文をパースします。パースが成功した場合は<a href="./index.ts">JapannetbankNotification</a>を返します。未対応な通知の場合は<code>undefined</code>を返します。</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { parseJapannetbankNotification } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@suin/japannetbank-email-parser&#x27;</span>
+
+<span class="hljs-keyword">const</span> notification = parseJapannetbankNotification({
+  subject: <span class="hljs-string">&#x27;【Ｖｉｓａデビット】ご利用代金お引き落としのお知らせ&#x27;</span>,
+  text: <span class="hljs-string">`
+いつもジャパンネット銀行をご利用いただきありがとうございます。
+JNB Visaデビットのご利用代金を普通預金口座よりお引き落としいたしました。
+
+お引落日時：2020/07/27 02:47:20
+お引落金額：2,205円
+加盟店名：ＧＩＴＨＵＢ
+取引明細番号：1A209002
+
+▽JNB Visaデビットは還元率25％のマイナポイント事業の対象です！`</span>,
+})
+
+<span class="hljs-built_in">console</span>.log(notification)
+<span class="hljs-comment">//=&gt; {</span>
+<span class="hljs-comment">//     type: &#x27;visaWithdrawn&#x27;,</span>
+<span class="hljs-comment">//     withdrawnOn: &#x27;2020-07-27T02:47:20+09:00&#x27;,</span>
+<span class="hljs-comment">//     useOfDate: undefined,</span>
+<span class="hljs-comment">//     amount: 2205,</span>
+<span class="hljs-comment">//     shop: &#x27;ＧＩＴＨＵＢ&#x27;,</span>
+<span class="hljs-comment">//     number: &#x27;1A209002&#x27;</span>
+<span class="hljs-comment">//   }</span></code></pre>
+				<p>通知種別ごとに分岐処理する場合は、<code>JapannetbankNotification</code>の<code>type</code>プロパティをヒントにしてください。</p>
+				<a href="#api-リファレンス" id="api-リファレンス" style="color: inherit; text-decoration: none;">
+					<h2>API リファレンス</h2>
+				</a>
+				<p><a href="https://suin.github.io/japannetbank-email-parser/">https://suin.github.io/japannetbank-email-parser/</a></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_automatictransferregistrationcreated_.html">&quot;automatic<wbr>Transfer<wbr>Registration<wbr>Created&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_automatictransferregistrationcreated_testdata_.html">&quot;automatic<wbr>Transfer<wbr>Registration<wbr>Created.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_automatictransferregistrationdeleted_.html">&quot;automatic<wbr>Transfer<wbr>Registration<wbr>Deleted&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_automatictransferregistrationdeleted_testdata_.html">&quot;automatic<wbr>Transfer<wbr>Registration<wbr>Deleted.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_automatictransferregistrationupdated_.html">&quot;automatic<wbr>Transfer<wbr>Registration<wbr>Updated&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_automatictransferregistrationupdated_testdata_.html">&quot;automatic<wbr>Transfer<wbr>Registration<wbr>Updated.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_bulktransfercompleted_.html">&quot;bulk<wbr>Transfer<wbr>Completed&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_bulktransfercompleted_testdata_.html">&quot;bulk<wbr>Transfer<wbr>Completed.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_bulktransferfeecharged_.html">&quot;bulk<wbr>Transfer<wbr>Fee<wbr>Charged&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_bulktransferfeecharged_testdata_.html">&quot;bulk<wbr>Transfer<wbr>Fee<wbr>Charged.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_bulktransferupcoming_.html">&quot;bulk<wbr>Transfer<wbr>Upcoming&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_bulktransferupcoming_testdata_.html">&quot;bulk<wbr>Transfer<wbr>Upcoming.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_extract_.html">&quot;extract&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_index_.html">&quot;index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_parser_.html">&quot;parser&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_payeasypaid_.html">&quot;payeasy<wbr>Paid&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_payeasypaid_testdata_.html">&quot;payeasy<wbr>Paid.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_testdataset_testkit_.html">&quot;test<wbr>Dataset.testkit&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_timedepositautomaticallyrenewed_.html">&quot;time<wbr>Deposit<wbr>Automatically<wbr>Renewed&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_timedepositautomaticallyrenewed_testdata_.html">&quot;time<wbr>Deposit<wbr>Automatically<wbr>Renewed.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_timedepositcreated_.html">&quot;time<wbr>Deposit<wbr>Created&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_timedepositcreated_testdata_.html">&quot;time<wbr>Deposit<wbr>Created.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_timedepositmatured_.html">&quot;time<wbr>Deposit<wbr>Matured&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_timedepositmatured_testdata_.html">&quot;time<wbr>Deposit<wbr>Matured.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_timedepositwillmature_.html">&quot;time<wbr>Deposit<wbr>Will<wbr>Mature&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_timedepositwillmature_testdata_.html">&quot;time<wbr>Deposit<wbr>Will<wbr>Mature.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_transferdeposited_.html">&quot;transfer<wbr>Deposited&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_transferdeposited_testdata_.html">&quot;transfer<wbr>Deposited.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_transferdestinationregistered_.html">&quot;transfer<wbr>Destination<wbr>Registered&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_transferdestinationregistered_testdata_.html">&quot;transfer<wbr>Destination<wbr>Registered.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_transferwithdrawallimitchanged_.html">&quot;transfer<wbr>Withdrawal<wbr>Limit<wbr>Changed&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_transferwithdrawallimitchanged_testdata_.html">&quot;transfer<wbr>Withdrawal<wbr>Limit<wbr>Changed.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_transferwithdrawalscheduled_.html">&quot;transfer<wbr>Withdrawal<wbr>Scheduled&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_transferwithdrawalscheduled_testdata_.html">&quot;transfer<wbr>Withdrawal<wbr>Scheduled.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_transferwithdrawn_.html">&quot;transfer<wbr>Withdrawn&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_transferwithdrawn_testdata_.html">&quot;transfer<wbr>Withdrawn.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_visafrozen_.html">&quot;visa<wbr>Frozen&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_visafrozen_testdata_.html">&quot;visa<wbr>Frozen.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_visalimitchanged_.html">&quot;visa<wbr>Limit<wbr>Changed&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_visalimitchanged_testdata_.html">&quot;visa<wbr>Limit<wbr>Changed.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_visarefunded_.html">&quot;visa<wbr>Refunded&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_visarefunded_testdata_.html">&quot;visa<wbr>Refunded.testdata&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_visawithdrawn_.html">&quot;visa<wbr>Withdrawn&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_visawithdrawn_testdata_.html">&quot;visa<wbr>Withdrawn.testdata&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
