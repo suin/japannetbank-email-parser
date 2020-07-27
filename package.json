@@ -1,6 +1,6 @@
 {
   "name": "@suin/japannetbank-email-parser",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "ジャパンネット銀行の通知メールをパースしてオブジェクトを返す関数",
   "keywords": [
     "email",
